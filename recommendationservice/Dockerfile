@@ -6,11 +6,13 @@ RUN apt-get update -qqy && \
 ENV PYTHONUNBUFFERED=0
 
 # download the grpc health probe
-k
+
 
 # get packages
 WORKDIR /recommendationservice
 COPY requirements.txt requirements.txt
+COPY requirements.in requirements.in
+RUN pip install -r requirements.in
 RUN pip install -r requirements.txt
 
 # add files into working directory

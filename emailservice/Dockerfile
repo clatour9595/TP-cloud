@@ -17,9 +17,9 @@ ENV PYTHONUNBUFFERED=1
 # Enable Profiler
 ENV ENABLE_PROFILER=1
 
-RUN apt-get -qq update \
-    && apt-get install -y --no-install-recommends \
-        wget
+# RUN apt-get -qq update \
+#     && apt-get install -y --no-install-recommends \
+#         wget
 
 # Download the grpc health probe
 # RUN GRPC_HEALTH_PROBE_VERSION=v0.3.6 && \
